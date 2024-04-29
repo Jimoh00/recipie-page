@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url('fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+:root {
+    /* primary colors */
+    --primary-nutmeg: hsl(14, 45%, 36%);
+    --primary-raspberry: hsl(332, 51%, 32%);
+
+    /* neutral colors */
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-rosewhite: hsl(330, 100%, 98%);
+    --neutral-eggshell: hsl(30, 54%, 90%);
+    --neutral-grey: hsl(30, 18%, 87%);
+    --neutral-brown: hsl(30, 10%, 34%);
+    --neutral-charcoal: hsl(24, 5%, 18%);
+
+    /* font family */
+    --ff-primary: 'Outfit', sans-serif;
+    --ff-secondary: 'Young Serif', sans-serif;
+
+    /* font size  */
+    --fz-paragraph: 16px;
+
+    /* font weight */
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+header {
+    padding-inline: 6%;
+    padding-block: 2rem;
+}
+
+header img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* main */
+.main {
+    padding-inline: 6%;
+}
+
+.main > .title {
+    font-size: 2.9em;
+    font-family: var(--ff-secondary);
+}
+
+.main > p {
+    font-size: 1.4em;
+    font-family: var(--ff-primary);
+    padding-block: 1.8rem;
+    line-height: 2.5rem;
+    color: var(--neutral-brown);
+}
+
+.main .preparation {
+    padding: 2rem;
+    background: var(--neutral-eggshell);
+}
+
+.main .preparation > .title {
+    color: var(--primary-raspberry);
+    font-family: var(--ff-primary);
+    font-size: 2em;
+    padding-inline: 2.4rem;
+}
+
+.preparation ul {
+    padding-inline: 3.6rem;
+    position: relative;
+    left: 2rem;
+    padding-block: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.preparation ul li {
+    font-family: var(--ff-primary);
+    font-size: 1.4em;
+    color: var(--neutral-brown);
+}
+
+.preparation ul li b {
+    color: var(--neutral-charcoal);
+}
+
+/* ingredient */
+.ingridient {
+    padding-block: 1.5rem;
+    border-bottom: 1px solid var(--primary-nutmeg);
+}
+
+.subheading {
+    color: var(--primary-nutmeg);
+    font-size: 2.8em;
+    font-family: var(--ff-secondary);
+}
+
+.ingridient ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: 1.5rem;
+    position: relative;
+    left: 27px;
+    font-size: 1.4em;
+    font-family: var(--ff-primary);
+    color: var(--neutral-brown);
+}
+
+.ingridient ul li {
+    list-style: square var(--primary-nutmeg);
+}
+
+/* instructions */
+.instruction {
+    padding-block: 1.5rem;
+}
+
+.instruction ol {
+    position: relative;
+    padding-block: 2rem;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.instruction ol li {
+    color: var(--neutral-brown);
+    font-size: 1.4em;
+    font-family: var(--ff-primary);
+    padding-inline: 2rem;
+}
+
+.instruction ol li b {
+    color: var(--neutral-charcoal);
+}
+
+/* nutrition */
+.nutrition > p {
+    font-size: 1.4em;
+    font-family: var(--ff-primary);
+    padding-top: 2rem;
+}
+
+.nutritional-table {
+    padding-block: 30px;
+}
+
+.nutritional-table > .item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid var(--primary-nutmeg);
+}
+
+.nutritional-table > .item:last-child {
+    border-bottom: none;
+}
+
+.nutritional-table > .item > p {
+    padding-block: 15px;
+    font-size: 1.4em;
+    padding-inline: 50px;
+    font-family: var(--ff-primary);
+}
+
+.nutritional-table > .item > .label {
+    color: var(--neutral-brown);
+}
+
+.nutritional-table > .item > .value {
+    color: var(--primary-nutmeg);
+    font-weight: var(--fw-700);
+}
+
+
+/* mobile design */
+@media(max-width: 700px) {
+    header {
+        padding: 0;
+    }
+
+    .main {
+        padding-inline: 8%;
+    }
+}
